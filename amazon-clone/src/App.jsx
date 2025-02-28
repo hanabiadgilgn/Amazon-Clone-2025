@@ -1,5 +1,5 @@
 import { useState } from 'react'
-import './App.css'
+import Header from './Components/Header/Header'
 
 function App() {
   
@@ -7,7 +7,7 @@ function App() {
   return (
     <>
       <div>
-        <h1> Amazon Clone</h1>
+        <Header />
       </div>
     </>
   );
