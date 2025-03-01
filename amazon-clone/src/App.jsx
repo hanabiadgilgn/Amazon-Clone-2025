@@ -1,5 +1,6 @@
 import { useState } from 'react'
 import Header from './Components/Header/Header'
+import  CarouselEffect  from "./Components/Carousel/CarouselEffect";
 
 function App() {
   
@@ -8,6 +9,7 @@ function App() {
     <>
       <div>
         <Header />
+        <CarouselEffect />
       </div>
     </>
   );
