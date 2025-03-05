@@ -26,7 +26,7 @@ function Header() {
                 </span>
                 <div>
                   <p>Delivered to</p>
-                  <span>Ethiopia</span>
+                  <span>Rosemount, MN</span>
                 </div>
               </div>
             </div>
@@ -40,7 +40,7 @@ function Header() {
             </div>
             {/* other section */}
             <div className={classes.order__container}>
-              <Link to="" className={classes.language}>
+              <Link to="/" className={classes.language}>
                 <img
                   src="https://upload.wikimedia.org/wikipedia/en/thumb/a/a4/Flag_of_the_United_States.svg/1024px-Flag_of_the_United_States.svg.png"
                   alt=""
