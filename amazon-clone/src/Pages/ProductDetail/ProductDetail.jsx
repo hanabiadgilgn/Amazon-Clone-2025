@@ -11,8 +11,10 @@ function ProductDetail() {
   const [product, setProduct] = useState({})
   const [isLoading, setLoading] = useState(false)
   const {productId} = useParams()
-  // console.log(productId);
+ 
+
   useEffect(()=> {
+    // when the page refershed setLoading should be true
     setLoading(true)
     // by using axios, we can requst the product id
     axios.get(`${productUrl}/products/${productId}`)
@@ -28,7 +30,11 @@ function ProductDetail() {
 
   return (
     <LayOut>
-    {isLoading? (<Loader/>) : (<ProductCard  product={product}/>)}
+      {isLoading ? (<Loader />) : (<ProductCard 
+      product={product} 
+      flex={true} 
+      renderDescption={true} 
+      />)}
     </LayOut>
   );
 }
