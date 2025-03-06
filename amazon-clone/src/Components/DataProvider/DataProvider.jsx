@@ -13,6 +13,3 @@ export const DataProvider = ({ children, reducer, initialState}) => {
 };
 
 
-
-// by passing (reducer & initialState) useReducer return the state and the dispatcher
-// const [state, dispatch] = useReducer(reducer, initialState);

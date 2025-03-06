@@ -40,9 +40,8 @@ function Results() {
               <ProductCard
                 key={product.id}
                 product={product}
-                renderDescption={false}
+                renderDescription={false}
                 renderAdd={true}
-               
               />
             );
           })}
