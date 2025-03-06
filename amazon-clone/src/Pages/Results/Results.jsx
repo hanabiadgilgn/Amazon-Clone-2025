@@ -36,10 +36,15 @@ function Results() {
           isLoading ? (<Loader/>) : (
         <div className={classes.products_container}>
           {results?.map((product) => {
-            return <ProductCard 
-            key={product.id} 
-            renderAdd={true}
-            product={product} />
+            return (
+              <ProductCard
+                key={product.id}
+                product={product}
+                renderDescption={false}
+                renderAdd={true}
+               
+              />
+            );
           })}
         </div>
          )}
