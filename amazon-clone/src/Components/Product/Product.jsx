@@ -9,6 +9,7 @@ function Product() {
     const [isLoading, setIsLoading] = useState()
 
     useEffect(()=>{
+        setIsLoading(true);
         axios.get('https://fakestoreapi.com/products')
         .then((res)=>{
             console.log(res)
