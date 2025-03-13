@@ -12,7 +12,7 @@ dist
 dist-ssr
 *.local
 
-src/Utility/.firebase.js
+
 
 # Editor directories and files
 .vscode/*
@@ -24,3 +24,4 @@ src/Utility/.firebase.js
 *.njsproj
 *.sln
 *.sw?
+src/Utility/.firebase.js
