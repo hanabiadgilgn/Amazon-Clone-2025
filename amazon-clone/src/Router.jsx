@@ -7,7 +7,14 @@ import Orders from './Pages/Orders/Orders'
 import Cart from './Pages/Cart/Cart'
 import Results from './Pages/Results/Results'
 import ProductDetail from './Pages/ProductDetail/ProductDetail'
+import { Elements } from "@stripe/react-stripe-js";
+import { loadStripe } from "@stripe/stripe-js";
 
+// Make sure to call `loadStripe` outside of a component’s render to avoid
+// recreating the `Stripe` object on every render.
+const stripePromise = loadStripe(
+  "pk_test_51I1dlkDtHgkAHmA7pvXDrVerAcAvRdKqVcSEsd7GXSPvTziyDiccTHA2hz0a4hWBVWz8tGILAIZ6kPEP2vEzpEnc005ZWx8Kj0"
+);
 
 function Routing() {
   return (
@@ -15,7 +22,11 @@ function Routing() {
       <Routes>
         <Route path="/" element={<Landing />} />
         <Route path="/auth" element={<Auth />} />
-        <Route path="/payments" element={<Payment />} />
+        <Route path="/payments" element={
+            <Elements stripe={stripePromise}>
+              <Payment />
+            </Elements>
+          }/>
         <Route path="/orders" element={<Orders />} />
         <Route path="/category/:categoryName" element={<Results />} />
         <Route path="/products/:productId" element={<ProductDetail />} />

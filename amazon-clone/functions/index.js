@@ -19,7 +19,7 @@ app.get("/", (req, res) =>{
     });
 });
 
-
+// this handels the server side of peyment
 app.post("/payment/create", async(req, res)=>{
     const total = req.query.total;
     if(total > 0) {
